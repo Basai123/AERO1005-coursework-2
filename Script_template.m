@@ -173,6 +173,28 @@ disp(a);
 temp_prediction(a);
 
 
+%% TASK 3 - DUAL SENSOR EXTENSION
+
+% This is an improved version of Task 3 using two sensors.
+% LED connections are the same as above:
+% Green LED  -> D8
+% Yellow LED -> D9
+% Red LED    -> D10
+%
+% Sensor 1 output -> A0
+% Sensor 2 output -> A1
+%
+% This version uses the average of two temperature readings
+% to reduce noise and make the prediction more stable.
+% Run it separately and stop it manually in MATLAB.
+
+a = arduino("COM4", "Uno");
+disp(a);
+
+% Run the dual-sensor version of the prediction function.
+temp_prediction_dual(a);
+
+
 %% TASK 4 - REFLECTIVE STATEMENT [5 MARKS]
 
 % See Word document.
