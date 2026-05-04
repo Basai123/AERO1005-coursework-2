@@ -155,7 +155,18 @@ temp_monitor(a);
 
 %% TASK 3 - ALGORITHMS – TEMPERATURE PREDICTION [30 MARKS]
 
-% Insert answers here
+% Use the same sensor and LED connections as in Task 2.
+% Green LED  -> D8
+% Yellow LED -> D9
+% Red LED    -> D10
+% Sensor     -> A0
+
+a = arduino("COM4", "Uno");
+disp(a);
+
+% Run the temperature prediction function.
+% Stop the function manually in MATLAB when you have collected enough data.
+temp_prediction(a);
 
 
 %% TASK 4 - REFLECTIVE STATEMENT [5 MARKS]
