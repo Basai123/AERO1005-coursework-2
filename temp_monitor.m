@@ -26,6 +26,7 @@ temperatureData = [];
 startTime = tic;
 
 % Quick LED test at the start.
+% This is useful for checking that each LED is wired to the correct pin.
 writeDigitalPin(a, greenPin, 1);
 pause(0.5);
 writeDigitalPin(a, greenPin, 0);
@@ -48,6 +49,7 @@ while 1
     temperatureValue = (voltageValue - V0) / TC;
 
     % Add the new point to the arrays.
+    % These arrays grow during the loop and are used for the live graph.
     timeData(end + 1) = elapsedTime;
     temperatureData(end + 1) = temperatureValue;
 

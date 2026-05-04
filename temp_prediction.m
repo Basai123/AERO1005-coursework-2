@@ -28,6 +28,7 @@ startTime = tic;
 % averageSize is used to smooth the temperature values.
 % rateWindow is used to estimate the temperature rate of change.
 % sampleCount is the number of voltage readings averaged each cycle.
+% Larger windows make the output more stable but also less responsive.
 averageSize = 10;
 rateWindow = 20;
 sampleCount = 5;
@@ -48,6 +49,7 @@ while 1
     temperatureValue = (voltageValue - V0) / TC;
 
     % Add the new temperature reading to the arrays.
+    % These stored values are used later for smoothing and prediction.
     timeData(end + 1) = currentTime;
     temperatureData(end + 1) = temperatureValue;
 
